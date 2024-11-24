@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import userApiClient from '../security/UserApiClient';
 
 function LoginForm() {
     const [username, setUsername] = useState('');
@@ -29,10 +30,12 @@ function LoginForm() {
           
         
         try {
-            const response = await axios.post('http://localhost:8080/api/user/login', {
+            const response = await userApiClient.post('http://localhost:8080/api/user/login', {
                 username: username,
                 password: password
             }, config);
+
+            
 
             console.log("Response is ->", response);
             if (response.data.loginStatus === 'Success') {

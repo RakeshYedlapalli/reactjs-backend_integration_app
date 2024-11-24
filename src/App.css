@@ -7,6 +7,8 @@
   pointer-events: none;
 }
 
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -145,4 +147,31 @@
 
 .login-button:hover {
   background-color: #45a049; /* Darker Green */
+}
+
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 14px;
+  color: #888;
+}
+
+.helloRakesh {
+  
+  height: 50px;
 }

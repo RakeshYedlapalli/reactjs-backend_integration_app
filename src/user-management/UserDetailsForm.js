@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import userApiClient from '../security/UserApiClient';
 
 function UserDetailsForm() {
     const [firstName, setFirstName] = useState('Rakesh');
@@ -39,16 +40,9 @@ function UserDetailsForm() {
     const handleSubmit = async (event) => {
         console.log("I am in handle sumbit");
         event.preventDefault();
-        console.log("Firstname->", firstName);
-        console.log("Firstname->", lastName);
-        console.log("Firstname->", dateOfBirth);
-        console.log("Firstname->", username);
-        console.log("Firstname->", password);
-
-       
         
         try {
-            const response = await axios.post('http://localhost:8080/api/user', {
+            const response = await userApiClient.post('http://localhost:8080/api/user', {
                 firstName: firstName,
                 lastName: lastName,
                 dob: "2024-03-06",

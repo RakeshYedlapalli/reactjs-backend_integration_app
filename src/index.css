@@ -11,3 +11,126 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.birthday-title {
+  font-size: 48px;
+  color: #e63946; /* Watermelon */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.birthday-message {
+  font-size: 24px;
+  color: #1d3557; /* Prussian Blue */
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #fcbf49; /* Goldenrod */
+  font-weight: bold;
+}
+
+.cake-img {
+  width: 300px;
+  height: auto;
+  margin-top: 50px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.container {
+  text-align: center;
+}
+
+.birthday-image {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.surprise-button {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.surprise-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.balloon1,
+.balloon2,
+.balloon3 {
+  position: absolute;
+  background-color: #ff6384;
+  border-radius: 50%;
+  width: 50px;
+  height: 70px;
+}
+
+.balloon1 {
+  left: 20%;
+  bottom: 0;
+}
+
+.balloon2 {
+  left: 50%;
+  bottom: 100px;
+}
+
+.balloon3 {
+  left: 80%;
+  bottom: 50px;
+}
+
+.cake {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 120px;
+  background-color: #8b4513;
+  border-radius: 10px 10px 0 0;
+}
+
+.candle {
+  position: absolute;
+  top: 10px;
+  background-color: #ffc0cb;
+  width: 10px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.candle:nth-child(1) {
+  left: 25%;
+}
+
+.candle:nth-child(2) {
+  left: 50%;
+}
+
+.candle:nth-child(3) {
+  right: 25%;
+}

@@ -3,7 +3,15 @@
 `Create a two spring boot application with including the technologies like Kafka, if possible rabbit MQ, Spring boot with microservices, docker , kubernetes, mongodb , pipeline like jenkins postgres, jfrog artificatory if possible, ReactJS for form submission, just create one form and add things like that... use spring boot reactive for processing the data...`
 
 # chat gpt link for code
-# https://chat.openai.com/share/d9d5c3bd-abc0-44ca-ac87-3b34504bf414
+# https://chat.openai.com/c/56321c0d-7e34-4bd2-ad0f-48104460402f
+
+
+# POJO  class generator from chat gpt
+https://chat.openai.com/c/85775ff0-f704-4cf4-a723-bf32552132e3
+
+# Latest chat
+
+https://chat.openai.com/c/9901fa1d-be4e-4295-8303-7036919f95c0
 
 
 
