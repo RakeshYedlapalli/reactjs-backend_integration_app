@@ -14,6 +14,10 @@ https://chat.openai.com/c/85775ff0-f704-4cf4-a723-bf32552132e3
 https://chat.openai.com/c/9901fa1d-be4e-4295-8303-7036919f95c0
 
 
+# Dockerization chatgpt chat
+https://chatgpt.com/c/6741f2e6-be54-8000-b882-e269330b6b73
+
+
 
 
 

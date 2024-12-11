@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { TextField, Grid, Typography, Card, CardContent, CardMedia } from '@mui/material';
-import axios from 'axios';
 import inventoryApiClient from '../security/InventoryApiClient';
 
 function ECommerceAppInfiniteScroll() {

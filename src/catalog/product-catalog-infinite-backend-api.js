@@ -15,13 +15,12 @@ function ECommerceAppInfiniteScrollBackend() {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [page, setPage] = useState(1);
+    const [setPage] = useState(1);
     const [loading, setLoading] = useState(false);
     const [hasMore, setHasMore] = useState(true);
     const [offset, setOffset] = useState(1);
     const BASE_URL = "http://localhost:8082/inventory/images/image/";
     const observer = useRef();
-    const [progress, setProgress] = React.useState(0);
     const [openModal, setOpenModal] = useState(false);
     const { keycloak, initialized } = useKeycloak();
 
@@ -29,7 +28,6 @@ function ECommerceAppInfiniteScrollBackend() {
         const storedCartItems = localStorage.getItem('cartItems');
         return storedCartItems ? JSON.parse(storedCartItems) : [];
     });
-    const [isItemAlreadyInCart, setIsItemAlreadyInCart] = useState(false);
     const history = useNavigate();
 
 
@@ -110,9 +108,6 @@ function ECommerceAppInfiniteScrollBackend() {
     const fetchProducts = async () => {
 
         console.log("GOing to wait ");
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
 
         // await sleep(5000);
 
@@ -178,15 +173,7 @@ function ECommerceAppInfiniteScrollBackend() {
         try {
 
 
-            const headers = {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${keycloak.idToken}`, // Replace with your authorization token or other headers
-                // Add any other custom headers here
-            };
 
-            function sleep(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
 
             // await sleep(5000);
 
@@ -199,28 +186,6 @@ function ECommerceAppInfiniteScrollBackend() {
     };
 
 
-    const fetchImages = async (imageId) => {
-        try {
-
-
-            const headers = {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${keycloak.idToken}`, // Replace with your authorization token or other headers
-                // Add any other custom headers here
-            };
-
-            // function sleep(ms) {
-            //     return new Promise(resolve => setTimeout(resolve, ms));
-            // }
-
-            // await sleep(5000);
-
-            return await axios.get(`http://localhost:8082/inventory/images/image/${imageId}`, { headers });
-            
-        } catch (error) {
-            console.error('Error fetching categories:', error);
-        }
-    };
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
@@ -228,7 +193,7 @@ function ECommerceAppInfiniteScrollBackend() {
         setProducts([]); // Clear existing products when search term changes
     };
 
-    const mainCartButton = (event) => {
+    const mainCartButton = () => {
         history('/cart')
     }
     const handleOpenModal = () => {
