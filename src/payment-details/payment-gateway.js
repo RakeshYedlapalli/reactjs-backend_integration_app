@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function PaymentDetails() {
-    
+    const [success, setSuccess] = useState('');
 
     const navigate = useNavigate();
 

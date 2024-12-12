@@ -28,6 +28,7 @@ function ECommerceAppInfiniteScrollBackend() {
         const storedCartItems = localStorage.getItem('cartItems');
         return storedCartItems ? JSON.parse(storedCartItems) : [];
     });
+    const [isItemAlreadyInCart, setIsItemAlreadyInCart] = useState(false);
     const history = useNavigate();
 
 
