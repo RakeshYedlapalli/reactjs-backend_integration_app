@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const userApiClient = axios.create({
-  baseURL: 'http://localhost:8080/', // Replace with your API base URL
+  baseURL: 'http://192.168.10.122:8080/', // Replace with your API base URL
   timeout: 10000, // Set a timeout for requests (optional)
 });
 
@@ -10,11 +10,11 @@ const userApiClient = axios.create({
 userApiClient.interceptors.request.use(
   async (config) => {
     // Retrieve token from localStorage or your preferred storage
-    const token = localStorage.getItem('keycloakToken'); // Example: retrieve token from localStorage
+    // const token = localStorage.getItem('keycloakToken'); // Example: retrieve token from localStorage
 
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
+    // if (token) {
+    //   config.headers.Authorization = `Bearer ${token}`;
+    // }
 
     return config;
   },

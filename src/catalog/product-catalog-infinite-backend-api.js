@@ -4,7 +4,7 @@ import axios from 'axios';
 import { pink } from '@mui/material/colors';
 import { AccountCircle, ShoppingCartSharp } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import { useKeycloak } from '@react-keycloak/web';
+// import { useKeycloak } from '@react-keycloak/web';
 import inventoryApiClient from '../security/InventoryApiClient';
 
 
@@ -22,7 +22,7 @@ function ECommerceAppInfiniteScrollBackend() {
     const BASE_URL = "http://localhost:8082/inventory/images/image/";
     const observer = useRef();
     const [openModal, setOpenModal] = useState(false);
-    const { keycloak, initialized } = useKeycloak();
+    // const { keycloak, initialized } = useKeycloak();
 
     const [cartItems, setCartItems] = useState(() => {
         const storedCartItems = localStorage.getItem('cartItems');
@@ -43,8 +43,8 @@ function ECommerceAppInfiniteScrollBackend() {
             // Example:
             // const response = await axios.post('/logout');
             // Handle logout success
-            console.log("Logout button clicked", keycloak, initialized);
-            keycloak.logout();
+            // console.log("Logout button clicked", keycloak, initialized);
+            // keycloak.logout();
 
         } catch (error) {
             // Handle error
@@ -119,18 +119,14 @@ function ECommerceAppInfiniteScrollBackend() {
         try {
             const limit = 50; // Number of products to fetch per request
 
-            const headers = {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${keycloak.idToken}`, // Replace with your authorization token or other headers
-                // Add any other custom headers here
-            };
+          
 
             let data = {
                 searchTerm,
                 limit,
                 offset
             }
-            console.log("I am going to send api call request ->", headers)
+            // console.log("I am going to send api call request ->", headers)
 
             // const response = await axios.post('http://localhost:8082/inventory/catalog/items',
             //     data, { headers });

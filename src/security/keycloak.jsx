@@ -11,7 +11,7 @@ import Keycloak from 'keycloak-js';
 
 
 const keycloakInst = new Keycloak({
-  url: 'http://localhost:3400/',
+  url: 'http://192.168.10.122:3400/',
   realm: 'keycloak-sso',
   clientId: 'spring-react-end-to-end',
   clientSecret: 'J3M3KwmGHUEdj0L7eMXFDOU2B8JEz3Xi',
